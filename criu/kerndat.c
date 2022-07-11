@@ -1110,7 +1110,7 @@ static void kerndat_save_cache(void)
 		return;
 
 	if (fstatfs(fd, &s) < 0 || s.f_type != TMPFS_MAGIC) {
-		pr_warn("Can't keep kdat cache on non-tempfs\n");
+		// pr_warn("Can't keep kdat cache on non-tempfs\n");
 		close(fd);
 		goto unl;
 	}
@@ -1446,7 +1446,7 @@ static int kerndat_has_nftables_concat(void)
 	kdat.has_nftables_concat = has;
 	return 0;
 #else
-	pr_warn("CRIU was built without libnftables support\n");
+	// pr_warn("CRIU was built without libnftables support\n");
 	kdat.has_nftables_concat = false;
 	return 0;
 #endif

@@ -1386,7 +1386,7 @@ int cr_service(bool daemon_mode)
 		server_addr.sun_family = AF_LOCAL;
 
 		if (opts.addr == NULL) {
-			pr_warn("Binding to local dir address!\n");
+			// pr_warn("Binding to local dir address!\n");
 			SET_CHAR_OPTS(addr, CR_DEFAULT_SERVICE_ADDRESS);
 		}
 
